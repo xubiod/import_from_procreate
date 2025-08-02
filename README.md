@@ -1,36 +1,35 @@
-<center>
-<h1>Import .procreate into Krita</h1>
-
-![Project splash](/docs/splash.png)
+<div align="center">
+  <h1>Import .procreate into Krita</h1>
+  <img src="/docs/splash.png" alt="Project splash" />
+  <br/>
 This is a Python 3 plugin for Krita that can import a Procreate project into Krita
 as a new document.
-</center>
+</div>
 
 > [!NOTE]
 > This is pretty identical to the Manual provided with the plugin shown within Krita.
 
 ## Installation
 
-1. Clone with submodules (`git clone --recurse-submodules`)
+1. Clone with submodules (`git clone --recurse-submodules https://github.com/xubiod/import_from_procreate.git`)
   - This is the only real "complicated" part; downloading as a ZIP does not include submodules to my knowledge. Sorry :(
 2. Move to under `pykrita` on a Krita install:
-  ```
-Krita install/
-    pykrita/
-      import_from_procreate/
-        [repo files]
-  ```
-1. Move `import_from_procreate.desktop` **outside of the folder**:
-  ```
-Krita install/
-    pykrita/
-      import_from_procreate/
-        [repo files]
-      import_from_procreate.desktop
-  ```
-![File list](/docs/file_list.png)
-
-1. Restart Krita if open
+  - ```
+    Krita install/
+        pykrita/
+          import_from_procreate/
+            [repo files]
+    ```
+3. Move `import_from_procreate.desktop` **outside of the folder**:
+  - ```
+    Krita install/
+        pykrita/
+          import_from_procreate/
+            [repo files]
+          import_from_procreate.desktop
+    ```
+  - ![File list](/docs/file_list.png)
+4. Restart Krita if open
 
 The plugin should be in the list, with the name **Procreate Project Importer**:
 
