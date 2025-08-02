@@ -17,6 +17,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           submodules: recursive
+          path: "import_from_procreate"
       - name: Package
         id: package
         run: |
