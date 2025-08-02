@@ -1,0 +1,32 @@
+name: import_from_procreate CI
+
+on:
+  push:
+    branches:
+    - main
+  pull_request:
+    branches:
+    - main
+  workflow_dispatch:
+
+jobs:
+  create-package:
+    name: Package with submods
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - name: Package
+        id: package
+        run: |
+          mv import_from_procreate/import_from_procreate.desktop import_from_procreate.desktop
+          zip -r import_from_procreate import_from_procreate.desktop import_from_procreate
+      - name: Upload
+        id: upload
+        uses: actions/upload-artifact@v4
+        with:
+            name: import-from-procreate-${{github.sha}}
+            path: |
+              import_from_procreate.zip
+            if-no-files-found: error
