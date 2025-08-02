@@ -5,6 +5,7 @@
 This is a Python 3 plugin for Krita that can import a Procreate project into Krita
 as a new document.
 </div>
+<br/>
 
 > [!NOTE]
 > This is pretty identical to the Manual provided with the plugin shown within Krita.
