@@ -1,0 +1,3 @@
+[submodule "biplist"]
+	path = biplist
+	url = https://github.com/wooster/biplist

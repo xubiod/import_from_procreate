@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Service
+ServiceTypes=Krita/PythonPlugin
+X-KDE-Library=import_from_procreate
+X-Python-2-Compatible=false
+X-Krita-Manual=Manual.html
+Name=Procreate Project Importer
+Comment=This plugin allows you to import a Procreate project into Krita as a new document.

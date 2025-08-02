@@ -1,0 +1,8 @@
+# Compressed versions of libraries that were extracted
+*.tar.gz
+
+# Pycache
+__pycache__
+*/__pycache__
+
+.DS_Store

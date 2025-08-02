@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Procreate Project Importer</title>
+</head>
+
+<body>
+    <h2>Procreate Project Importer</h2>
+    <p><strong>NOTE: Please check the "<a href="#caveats">Caveats</a> " section!</strong></p>
+    <p>
+        <a href="#overview">Overview</a> | <a href="#caveats">Caveats</a> | <a href="#credits">Credits</a>
+    </p>
+    <hr>
+    <section>
+        <h3 id="overview">Overview</h3>
+        <p>
+            This plugin can import Procreate documents into Krita with complete layers with:
+            <ul>
+                <li>Layer image data</li>
+                <li>Layer opacity</li>
+                <li>Clipping mask/alpha inheritance, alpha lock, visiblity and locks applied properly</li>
+                <li>Correct<sup>1</sup> blend modes</li>
+                <li>Groups with their proper children</li>
+                <li>Colour profiles taken into consideration</li>
+            </ul>
+        </p>
+
+        <p>
+            The plugin adds two items to <strong>Tools > Scripts</strong>:
+            <ul>
+                <li><strong>Import *.procreate File as New Document...</strong> - Imports a Procreate document into Krita as a new document, using an Open File window.</li>
+                <li><strong>Procreate Importer Settings...</strong> - Settings for the plugin itself.</li>
+            </ul>
+            Settings are heavily documented with tooltips, and are mostly relegated to how to automatically handle popups the plugin shows for certain elements of the import process.
+        </p>
+        <br>
+        <div><sup>1</sup>: Blend modes were estimated from Krita's list, with preference towards Photoshop blend modes.
+            These might not be completely accurate to Procreate as a result.</div>
+    </section>
+    <hr>
+    <section>
+        <h3 id="caveats">Caveats</h3>
+        <p>There are some caveats with the current state of the importer that should be mentioned:</p>
+        <ul>
+            <li>Older Procreate documents that use LZO compression:
+                <ul>
+                    <li>Have decompression problems</li>
+                    <li>Take slightly longer to decompress</li>
+                </ul>
+            </li>
+            <li>Clipping masks/layers with inherit alpha enabled are accurate with <u>layer structure</u>, but
+                <strong>NOT
+                    <u>accurate visually</u></strong>
+                <ul>
+                    <li>You can group a paint layer with its' clipping masks above it together to get accurate visuals
+                    </li>
+                    <li>This issue only exists because of how Krita implements this behaviour</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+    <hr>
+    <section>
+        <h3 id="credits">Credits</h3>
+        <ul>
+            <li>Xubiod - plugin and import logic</li>
+            <li>Jan Kneschke - inital pure Python LZ4 decompression logic</li>
+            <li>Toke Høiland-Jørgensen - pure Python LZO decompression logic</li>
+            <li>Andrew Wooster, Kevin Kelley - The <code>biplist</code> pip package for reading binary Apple plist files</li>
+        </ul>
+    </section>
+</body>
+
+</html>
