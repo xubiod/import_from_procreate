@@ -21,7 +21,6 @@ jobs:
       - name: Package
         id: package
         run: |
-          ls
           mv import_from_procreate/import_from_procreate.desktop import_from_procreate.desktop
           zip -r import_from_procreate import_from_procreate.desktop import_from_procreate
       - name: Upload
