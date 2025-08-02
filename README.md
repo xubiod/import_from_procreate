@@ -12,8 +12,25 @@ as a new document.
 
 ## Installation
 
+### Actions
+
+1. Check out this [workflow's latest run](https://github.com/xubiod/import_from_procreate/actions/workflows/main.yml) to download its artifact
+  - Topmost run name
+  - Scroll to `Artifacts`
+  - Download the zip file listed
+    - Should be named `import-from-procreate` followed by a hash
+2. Extract its contents, should contain:
+  - ```
+    import_from_procreate/
+    import_from_procreate.desktop
+    ```
+3. Move/copy the inner folder and `.desktop` file into Krita's install under `pykrita`
+4. Restart Krita if open
+    
+
+### Manually via clone
+
 1. Clone with submodules (`git clone --recurse-submodules https://github.com/xubiod/import_from_procreate.git`)
-  - This is the only real "complicated" part; downloading as a ZIP does not include submodules to my knowledge. Sorry :(
 2. Move to under `pykrita` on a Krita install:
   - ```
     Krita install/
