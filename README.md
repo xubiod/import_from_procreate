@@ -12,6 +12,11 @@ as a new document.
 
 ## Installation
 
+### Releases
+
+1. Check out the [latest release](https://github.com/xubiod/import_from_procreate/releases)
+2. In the menu bar, you can go to **Tools -> Scripts -> Import Python Plugin from File...**
+
 ### Actions
 
 1. Check out this [workflow's latest run](https://github.com/xubiod/import_from_procreate/actions/workflows/main.yml) to download its artifact
@@ -19,14 +24,7 @@ as a new document.
   - Scroll to `Artifacts`
   - Download the zip file listed
     - Should be named `import-from-procreate` followed by a hash
-2. Extract its contents, should contain:
-  - ```
-    import_from_procreate/
-    import_from_procreate.desktop
-    ```
-3. Move/copy the inner folder and `.desktop` file into Krita's install under `pykrita`
-4. Restart Krita if open
-    
+2. In the menu bar, you can go to **Tools -> Scripts -> Import Python Plugin from File...**
 
 ### Manually via clone
 
